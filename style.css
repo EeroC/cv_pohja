@@ -1,0 +1,253 @@
+* {
+    margin: 0px;
+    padding: 0;
+}
+
+html {
+    /*height: 100%;*/
+}
+
+body {
+    display: grid;
+    background-size: cover;
+    text-align: center;
+    background-image: linear-gradient(#7D869C, #000000);
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-left: 400px;
+    padding-right: 400px;
+}
+
+/*NAV ALKAA*/
+nav {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding-bottom: 20px;
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+nav ul {
+    background-color: #B4C4AE;
+    list-style: none;
+    min-width: max-content;
+    padding-top: 10px;
+    min-height: 30px;
+    max-height: 40px;
+    text-align: center;
+    border-radius: 0px 0px 10px 10px;
+    border-style: inherit;
+    box-shadow: 5px 5px 15px 5px #000000;
+
+}
+
+nav ul li {
+   
+    color: #586994;
+}
+
+nav ul li a {
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 5px;
+    padding-right: 10px;
+    color: #586994;
+}
+
+/*HOVERI ALKAA TÄSSÄNÄINNIIN*/
+
+nav ul li a::before,
+nav ul li a::after { 
+content: '';
+position: absolute;
+width: 100%;
+left: 0;
+}
+
+nav ul li a::before {
+    background-color: #54b3d6;
+    height: 2px; /*ALAVIIVA*/
+    bottom: 0;
+    transform-origin: 100% 50%;
+    transform: scaleX(0);
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+nav ul li a::after {
+content: attr(data-replace);
+top: 0;
+transform-origin: 100% 50%;
+transform: translate3d(200%, 0, 0);
+transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+color: #54b3d6
+}
+
+nav ul li a:hover::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+}
+
+nav ul li a:hover::after {
+    transform: translate3d(0, 0, 0,);
+}
+
+nav ul li a span {
+    display: inline-block;
+    transition: transform .3s cubic-bezier(0.76, 0, 0.24, 1);
+}
+
+nav ul li a:hover span {
+    transform: translate3d(-200%, 0, 0);
+}
+
+nav ul li a:hover::after,
+nav ul li a:focus::after {
+    transform: translate3d(0, 0, 0);
+}
+
+
+
+nav ul li a:hover::before,
+nav ul li a:focus::before {
+    transform-origin: 0% 50%;
+    transform: scaleX(1);
+}
+
+/* HOVERI PÄÄTTYY TÄSSÄ NÄINNNIIN*/
+
+/*Sisältö*/
+
+#wrapper {
+    
+}
+
+#etuotsikko {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color: #000000; 
+}
+
+/*PAPUKAIJA*/
+
+.papu {
+    
+    padding-bottom: 50px;
+    text-align: center;
+    align-content: center;
+    border-radius: 7.5px;
+    background-color: #a2abab85;
+    border-style: inherit;
+    box-shadow: 5px 5px 15px 5px #000000;
+    
+    
+}
+
+.papu h2 {
+    padding-top: 10px;
+    color: #000000;
+}
+
+.papu p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+
+.papu img {
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 20px;
+    border-style: double;
+    box-shadow: 2.5px 2.5px 7.5px 2.5px #000000;    
+}
+.papu img:hover {
+    max-width: 550px;
+    max-height: 550px;
+    border-radius: 22px;
+    border-style: double;
+}
+
+/*BANAANI*/
+
+.banana {
+
+    padding-bottom: 50px;
+    text-align: center;
+    align-content: center;
+    border-radius: 7.5px;
+    border-style: inherit;
+    background-color: #a2abab85;
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+
+.banana h2 {
+    padding-top: 10px;
+    color: #000000;
+}
+
+.banana p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.banana img {
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 20px;
+    border-style: double;
+    box-shadow: 2.5px 2.5px 7.5px 2.5px #000000;    
+}
+
+.banana img:hover {
+    max-width: 550px;
+    max-height: 550px;
+    border-radius: 22px;
+    border-style: double;
+}
+
+/*VIDEO*/
+
+.lehti {
+
+    padding-bottom: 50px;
+    text-align: center;
+    align-content: center;
+    border-radius: 7.5px;
+    border-style: inherit;
+    background-color: #a2abab85;
+    box-shadow: 5px 5px 15px 5px #000000;
+    
+}
+
+.lehti h2 {
+    padding-top: 10px;
+    color: #000000;
+}
+
+.lehti p {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.lehti video {
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 20px;
+    border-style: double;
+    box-shadow: 2.5px 2.5px 7.5px 2.5px #000000;    
+}
+
+.lehti video:hover {
+    max-width: 550px;
+    max-height: 550px;
+    border-radius: 22px;
+    border-style: double;
+}
